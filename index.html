@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" novalidate>
+        <h1>Client side form validation</h1>
+        <div class="email-wrapper">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" data-name="email" required><br>
+            <span class="email-error" aria-live="polite"></span>
+        </div>
+        <div class="country-wrapper">
+            <label for="country">Country</label><br>
+            <select name="country" id="country" data-name="country">
+                <option selected value="Switzerland">Switzerland</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="USA">USA</option>
+                <option value="Germany">Germany</option>
+                <option value="Netherlands">The Netherlands</option>
+                <option value="Spain">Spain</option>
+                <option value="France">France</option>
+                <option value="UK">UK</option>
+                <option value="Japan">Japan</option>
+                <option value="SouthKorea">South Korea</option>
+            </select><br>
+            <span class="country-error" aria-live="polite"></span>
+        </div>
+        <div class="postal-code-wrapper">
+            <label for="postal-code">Postal Code</label><br>
+            <input type="text" name="postal-code" id="postal-code" data-name="postalCode" required><br>
+            <span class="postal-code-error" aria-live="polite"></span>
+        </div>
+        <div class="password-wrapper">
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password" data-name="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s])[^\s]{8,}$" required minlength="8"><br>
+            <span class="password-error" aria-live="polite"></span>
+            <p class="uppercase active">Password should contain at least one uppercase</p>
+            <p class="special-char active">Password should contain at least one special character punctuation mark</p>
+            <p class="digit active">Password should include at least a digit</p>
+        </div>
+        <div class="password-confirmation-wrapper">
+            <label for="password-confirmation">Confirm Password</label><br>
+            <input type="password" name="password-confirmation" id="password-confirmation" data-name="passwordConfirmation" required><br>
+            <span class="password-confirmation-error" aria-live="polite"></span>
+        </div>
+        <button type="submit" id="submit-btn">Submit</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

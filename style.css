@@ -1,0 +1,16 @@
+input:user-invalid {
+    border: 2px dashed red;
+}
+
+span.active {
+    background-color: red;
+    color: white;
+}
+
+p {
+    color: green;
+}
+
+p.active {
+    color: red;
+}
